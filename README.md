@@ -2,7 +2,7 @@
 
 *Tällä* kurssilla opiskellaan **ohjelmointitekniikan** perustekniikoita.
 
-## viikko1
+### viikko1
 
 [gitlog.txt](https://github.com/lxhelmer/ot-harjoitus/blob/main/gitlog.txt)
 
