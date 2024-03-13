@@ -1,5 +1,5 @@
 # Ot kurssi
-
+.
 *Tällä* kurssilla opiskellaan **ohjelmointitekniikan** perustekniikoita.
 
 ### viikko1
