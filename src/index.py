@@ -39,7 +39,6 @@ def starter():
         elif command == "q":
             print("goodbye")
             break
-            
 
 starter()
 
