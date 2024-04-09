@@ -7,13 +7,20 @@ class DeviceRepository:
 
     def find_by_device_id(self, id):
         devices = self.find_all()
-        return list(filter(labmda device: device.id == id, devices))
+        return list(filter(lambda device: device["id"] == id, devices))
+
+    def remove_by_device_id(self, id):
+        to_remove = self.find_by_device_id(id)
+        devices = self.find_all()
+        devices_updated = list(filter(lambda device: device["id"] != to_remove[0]["id"], devices))
+        self._write(devices_updated)
+        return to_remove
 
     def create(self, device):
         devices = self.find_all()
-        devices.append(devices)
+        devices.append(device)
         self._write(devices)
-        return todo
+        return device
 
     def _read(self):
         return self._devices
