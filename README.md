@@ -5,9 +5,9 @@
 
 [Changelog](https://github.com/lxhelmer/ot-harjoitus/blob/main/changelog.md)
 
-[vaatimusmäärittely](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-[tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 
 
