@@ -1,7 +1,22 @@
 from device_repository import DeviceRepository
+from ui.ui import UI
+from tkinter import Tk
 
 def starter():
     devices = DeviceRepository()
+
+    window = Tk()
+    window.title("TkInter example")
+    window.geometry("500x500")
+    ui = UI(window, devices)
+    #populate devices for preliminary testing
+    devices.create({ "id":"121","name":"machine1", "user":"user1"})
+    devices.create({ "id":"122","name":"machine2", "user":"user2"})
+    devices.create({ "id":"123","name":"machine3", "user":"user3"})
+
+    ui.start()
+    window.mainloop()
+
 
     while (True):
         command = input("What do you wan't to do? input 'h' for help: ")
