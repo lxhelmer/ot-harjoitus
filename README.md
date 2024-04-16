@@ -10,6 +10,7 @@
 [Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/tuntikirjanpito.md)
 
 
+### Siirry kansioon wol-ctrl
 
 ## Asennus
 
