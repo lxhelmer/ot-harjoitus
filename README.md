@@ -9,6 +9,8 @@
 
 [Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/tuntikirjanpito.md)
 
+[Arkkitehtuuri](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/arkkitehtuuri.md)
+
 
 
 
