@@ -10,9 +10,10 @@
 [Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/tuntikirjanpito.md)
 
 
-### Siirry kansioon wol-ctrl
+
 
 ## Asennus
+### Siirry kansioon wol-ctrl
 
 1. Riippuvuudet asennetaan komennolla:
 
