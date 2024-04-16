@@ -34,3 +34,8 @@ on mahdollisuus muokata käyttäjiä ja niiden tietoja.
 - Admin käyttäjän mahdollisuus lisätä tietylle joukolle yhteinen laite
 - Admin käyttäjän mahdollisuus lisätä laitteita joita normaalikäyttäjä ei voi muokata
 - Normaalikäyttäjän mahdollisuus lisätä yksityinen adminkäyttäjien tavoittamattomissa oleva käyttäjä
+
+## Tehty
+- Laitteet listataan käyttäjälle
+- Käyttäjä voi poistaa tai lisätä laitteen
+- Ohjelma toimii graafisessa käyttöliittymässä
