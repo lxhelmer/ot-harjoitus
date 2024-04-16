@@ -5,10 +5,10 @@ class UserRepository:
     def find_all(self):
         return self._read()
 
-    def create(self, username, hash):
+    def create(self, username, usr_hash):
         users = self.find_all()
         if username not in users.keys():
-            users[username] = hash
+            users[username] = usr_hash
             self._write(users)
             return username
         return ""
@@ -18,4 +18,3 @@ class UserRepository:
 
     def _write(self, users):
         self._users = users
-

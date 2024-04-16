@@ -25,6 +25,5 @@ class DeviceFrame:
         self.generate_device_frame()
 
     def handle_delete(self,id):
-        print(id)
         self._dRepo.remove_by_device_id(id)
         self.update()

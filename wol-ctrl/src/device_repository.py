@@ -5,12 +5,12 @@ class DeviceRepository:
     def find_all(self):
         return self._read()
 
-    def find_by_device_id(self, id):
+    def find_by_device_id(self, dev_id):
         devices = self.find_all()
-        return list(filter(lambda device: device["id"] == id, devices))
+        return list(filter(lambda device: device["id"] == dev_id, devices))
 
-    def remove_by_device_id(self, id):
-        to_remove = self.find_by_device_id(id)
+    def remove_by_device_id(self, dev_id):
+        to_remove = self.find_by_device_id(dev_id)
         devices = self.find_all()
         devices_updated = list(filter(lambda device: device["id"] != to_remove[0]["id"], devices))
         self._write(devices_updated)
@@ -27,6 +27,3 @@ class DeviceRepository:
 
     def _write(self, devices):
         self._devices = devices
-
-
-
