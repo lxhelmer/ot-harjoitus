@@ -40,3 +40,10 @@ Testikattavuusraportti generoidaan komennolla:
 ```bash
 poetry run invoke coverage-report
 ```
+
+### Koodin laatu
+
+Ohjelmakoodille voi ajaa linttauksen komennolla:
+```bash
+poetry run invoke lint
+```
