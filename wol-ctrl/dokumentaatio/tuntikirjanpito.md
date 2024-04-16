@@ -5,5 +5,4 @@
 |9.4.24| 3h    | DeviceRepository toiminnallisuuden toteutus ja text ui
 |13.4.24| 3h   | UI kehitystyötä, toiminnallisuuden siirtoa uihin
 |16.4.24| 4h   | Lisäystoiminto uihin, uusi user repo taustalle ja sille testit
-
 |yhteensä| 14h| 
