@@ -3,11 +3,11 @@
 
 ## Dokumentaatio
 
-[Changelog](https://github.com/lxhelmer/ot-harjoitus/blob/main/changelog.md)
+[Changelog](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/changelog.md)
 
-[Vaatimusmäärittely](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/vaatimusmaarittely.md)
 
-[Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/tuntikirjanpito.md)
 
 
 
