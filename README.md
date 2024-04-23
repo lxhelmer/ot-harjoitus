@@ -52,3 +52,5 @@ Ohjelmakoodille voi ajaa linttauksen komennolla:
 ```bash
 poetry run invoke lint
 ```
+
+### OHJELMAA VOI TÄLLÄ HETKELLÄ KÄYTTÄÄ TUNNUKSIN "admin" "admin"
