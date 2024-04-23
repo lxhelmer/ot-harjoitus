@@ -1,14 +1,18 @@
 from tkinter import Tk
 from device_repository import DeviceRepository
+from user_repository import UserRepository
+from services.login_service import LoginService
 from ui.ui import UI
 
 def starter():
     devices = DeviceRepository()
+    users = UserRepository()
+    login_service = LoginService(users)
 
     window = Tk()
     window.title("TkInter example")
     window.geometry("500x500")
-    ui = UI(window, devices)
+    ui = UI(window, devices, users, login_service)
     #populate devices for preliminary testing
     devices.create({ "id":"121","name":"machine1", "user":"user1"})
     devices.create({ "id":"122","name":"machine2", "user":"user2"})
