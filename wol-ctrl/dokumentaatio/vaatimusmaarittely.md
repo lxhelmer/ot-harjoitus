@@ -39,3 +39,5 @@ on mahdollisuus muokata käyttäjiä ja niiden tietoja.
 - Laitteet listataan käyttäjälle
 - Käyttäjä voi poistaa tai lisätä laitteen
 - Ohjelma toimii graafisessa käyttöliittymässä
+- Käyttäjä voi kirjautua sisään (toimii tällä hetkellä vain "admin","admin" tunnuksilla
+- Kirjautumisen jälkeen näkymä vaihtuu laitenäkymään
