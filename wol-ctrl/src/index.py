@@ -18,6 +18,10 @@ def starter():
     devices.create({ "id":"122","name":"machine2", "user":"user2"})
     devices.create({ "id":"123","name":"machine3", "user":"user3"})
 
+    #populate with default user
+    users.create(
+            "admin","scrypt:32768:8:1$w5gDLWpvraPNqc4Q$0105f60696e65049ff24cac16668b538426572715fb52f494644fbca311e0cb68b2f6957b6c9c74ad7a8593180f722e968879e80f07772b9f9b36a6dd20c6b8e")
+
     ui.start()
     window.mainloop()
 
