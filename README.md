@@ -11,6 +11,7 @@
 
 [Arkkitehtuuri](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/arkkitehtuuri.md)
 
+[Viikon 5 release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/viikko5)
 
 
 
