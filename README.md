@@ -23,8 +23,13 @@
 ```bash
 poetry install
 ```
+2. Alusta ohjelma komennolla
 
-2. Sovellus käynnistetään komennolla:
+```bash
+poetry run invoke init
+```
+
+3. Sovellus käynnistetään komennolla:
 
 ```bash
 poetry run invoke start
