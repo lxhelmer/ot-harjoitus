@@ -1,6 +1,7 @@
 from db_connection import get_database_connection, get_test_connection
 
 def drop_tables(connection):
+    """Delete user and device tables from the database."""
     cursor = connection.cursor()
 
     cursor.execute('''
@@ -12,10 +13,20 @@ def drop_tables(connection):
     connection.commit()
 
 def create_tables(connection):
+    """Create user and device tables.
+    Arg:
+        connection: database connection
+    """
     create_user_table(connection)
     create_device_table(connection)
 
 def create_user_table(connection):
+    """Create user table with the 
+    specified fields.
+
+    Arg:
+        connection: database connection
+    """
     connection.cursor().execute('''
                    CREATE TABLE users (
                        username text primary key,
@@ -25,6 +36,12 @@ def create_user_table(connection):
     connection.commit()
 
 def create_device_table(connection):
+    """Create device table with the 
+    specified fields.
+
+    Arg:
+        connection: database connection
+    """
     connection.cursor().execute('''
                    CREATE TABLE devices (
                        id   INTEGER PRIMARY KEY,

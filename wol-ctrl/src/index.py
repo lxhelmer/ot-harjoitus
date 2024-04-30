@@ -6,6 +6,9 @@ from ui.ui import UI
 from db_connection import get_database_connection
 
 def starter():
+    """Program starting function to generate necessary
+    instances and starting the ui using them.
+    """
     connection = get_database_connection()
     devices = DeviceRepository(connection)
     users = UserRepository(connection)

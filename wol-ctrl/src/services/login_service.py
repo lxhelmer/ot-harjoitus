@@ -1,6 +1,8 @@
 from werkzeug.security import check_password_hash
 
 class LoginService:
+    """Class for handling the loging functionality.
+    """
     def __init__(self, user_repo):
         self._users = user_repo
 

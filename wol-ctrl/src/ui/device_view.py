@@ -1,19 +1,40 @@
 from tkinter import ttk, constants
 
 class DeviceView:
+    """Class for generating the general view of
+    displaying device objects in ui.
+
+    Attributes:
+        frame: Master frame for view
+        root: Root to set the view frame in
+        dRepo: Device repostory to get devices to ui.
+    """
     def __init__(self, root, deviceRepo):
+        """Initialising function for the class
+        Args:
+            frame: Master frame for view
+            root: Root to set the view frame in
+            dRepo: Device repostory to get devices to ui.
+        """
         self._frame = None
         self._root = root
         self._dRepo = deviceRepo
         self.generate_device_view()
 
     def pack(self):
+        """Packs the class frame to be displayed.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Destroys the current frame.
+        """
         self._frame.destroy()
 
     def generate_device_view(self):
+        """Function for generating the view and
+        setting the ui objects in the right spots.
+        """
         rendered_devices = self._dRepo.find_all()
         self._frame = ttk.Frame(self._root)
         for i, dev in enumerate(rendered_devices):
@@ -53,14 +74,23 @@ class DeviceView:
         self.pack()
 
     def update(self):
+        """Updates the current frame. Is used to update the
+        list that is displayed when it's updated.
+        """
         self.destroy()
         self.generate_device_view()
 
     def handle_delete(self,id):
+        """Handles the deletion of device and calls the needed
+        update of displayed list.
+        """
         self._dRepo.remove_by_device_id(id)
         self.update()
 
     def _handle_add(self):
+        """Handles the addition of device and calls the needed
+        update of displayed list.
+        """
         name = self._name_entry.get()
         user = self._user_entry.get()
         mac = self._mac_entry.get()
