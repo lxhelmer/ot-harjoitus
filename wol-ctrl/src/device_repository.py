@@ -11,7 +11,7 @@ class DeviceRepository:
             connection: database connection
         """
         self._connection = connection
-        
+
     def find_all(self):
         """Returns all device instances from the db.
 
@@ -63,7 +63,7 @@ class DeviceRepository:
         Arg:
             new_device: Device in the most used dict form.
         Returns:
-            new_device: Either returns the added device or 
+            new_device: Either returns the added device or
             empty dict to indicate failure.
         """
         devices = self.find_all()
@@ -82,7 +82,7 @@ class DeviceRepository:
         cursor.execute('''SELECT * FROM devices''')
         rows = cursor.fetchall()
         return rows
-    
+
     def _write(self, device_list):
         """Handles the SQL query of adding a
         object to the database.
