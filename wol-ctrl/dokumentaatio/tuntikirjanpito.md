@@ -7,4 +7,6 @@
 |16.4.24| 4h   | Lisäystoiminto uihin, uusi user repo taustalle ja sille testit
 |19.4.24| 3h   | UI uudelleen järjestely ja login
 |23.4.24| 3h   | LoginService, Hahing, testejä, koodinlaatua
-|yhteensä| 20h| 
+|28.4.24| 4h   | SQL integraatio
+|30.4.24| 4h   | UI uudelleen rakennus, docstring ja testien muokkaaminen sql yhteensopiviks
+|yhteensä| 28h| 
