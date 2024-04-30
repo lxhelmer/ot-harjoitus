@@ -11,9 +11,12 @@
 
 [Arkkitehtuuri](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/kayttoohje.md)
+
 [Viikon 5 release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/viikko5)
 
-[Käyttöohje](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/kayttoohje.md)
+[Viikon 6 release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/viikko6)
+
 
 
 
