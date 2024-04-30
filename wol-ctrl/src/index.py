@@ -13,7 +13,7 @@ def starter():
 
     window = Tk()
     window.title("TkInter example")
-    window.geometry("500x500")
+    window.geometry("800x800")
     ui = UI(window, devices, users, login_service)
     #populate devices for preliminary testing
     devices.create({ "name":"machine1", "user":"user1", "mac":"23:A1", "ip": "123.121"})

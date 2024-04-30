@@ -27,23 +27,29 @@ class DeviceView:
             delete_button.grid(row=i, column=2, pady=5)
         l_l = len(rendered_devices)
 
-        self._id_label = ttk.Label(master = self._frame, text="id")
         self._name_label = ttk.Label(master = self._frame, text="device name")
         self._user_label = ttk.Label(master = self._frame, text="user name")
+        self._mac_label = ttk.Label(master = self._frame, text="mac-addr")
+        self._ip_label = ttk.Label(master = self._frame, text="ip-addr")
         self._add_button = ttk.Button(master = self._frame, text="add", command=self._handle_add)
-        self._id_entry = ttk.Entry(master = self._frame)
         self._name_entry = ttk.Entry(master = self._frame)
         self._user_entry = ttk.Entry(master = self._frame)
+        self._mac_entry = ttk.Entry(master = self._frame)
+        self._ip_entry = ttk.Entry(master = self._frame)
 
         self._add_label = ttk.Label(master=self._frame, text="Add a new device!")
         self._add_label.grid()
-        self._id_label.grid()
-        self._id_entry.grid(row = l_l+1 , column=1, pady = 5)
         self._name_label.grid()
-        self._name_entry.grid(row=l_l+2, column=1, pady = 5)
+        self._name_entry.grid(row=l_l+1, column=1, pady = 5)
         self._user_label.grid()
-        self._user_entry.grid(row=l_l+3, column=1, pady = 5)
-        self._add_button.grid(row=l_l+3, column=2, pady = 5)
+        self._user_entry.grid(row=l_l+2, column=1, pady = 5)
+        self._mac_label.grid()
+        self._mac_entry.grid(row=l_l+3, column=1, pady = 5)
+        self._ip_label.grid()
+        self._ip_entry.grid(row=l_l+4, column=1, pady = 5)
+
+
+        self._add_button.grid(row=l_l+4, column=2, pady = 5)
         self.pack()
 
     def update(self):
@@ -55,9 +61,11 @@ class DeviceView:
         self.update()
 
     def _handle_add(self):
-        id = self._id_entry.get()
         name = self._name_entry.get()
         user = self._user_entry.get()
-        self._dRepo.create({"id":id,"name":name, "user":user})
-        self.update()
+        mac = self._mac_entry.get()
+        ip = self._ip_entry.get()
+        if not(name == "" or user == "" or mac == "" or ip == ""):
+            self._dRepo.create({"name":name, "user":user, "mac":mac, "ip":ip})
+            self.update()
 
