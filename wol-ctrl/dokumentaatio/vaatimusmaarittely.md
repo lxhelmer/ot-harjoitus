@@ -41,3 +41,6 @@ on mahdollisuus muokata käyttäjiä ja niiden tietoja.
 - Ohjelma toimii graafisessa käyttöliittymässä
 - Käyttäjä voi kirjautua sisään (toimii tällä hetkellä vain "admin","admin" tunnuksilla
 - Kirjautumisen jälkeen näkymä vaihtuu laitenäkymään
+- Laitteet ja käyttäjät säilytetään tietokannoissa.
+- Laitteesta lisätään nyt myös mac ja ip joita tarvitaan wol käskyn lähettämiseen
+- ip ja mac otetaan huomioon tietokantaskeemassa sekä uissa
