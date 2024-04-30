@@ -19,3 +19,8 @@ def coverage_report(ctx):
 @task
 def lint(ctx):
     ctx.run("poetry run pylint src", pty=True)
+
+@task
+def init(ctx):
+    ctx.run("mkdir data", pty=True)
+    ctx.run("python3 src/init_db.py", pty=True)
