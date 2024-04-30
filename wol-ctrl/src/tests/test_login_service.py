@@ -1,10 +1,11 @@
 import unittest
 from services.login_service import LoginService
 from user_repository import UserRepository
+from db_connection import get_test_connection
 
 class TestLoginService(unittest.TestCase):
     def setUp(self):
-        self.userRp = UserRepository() 
+        self.userRp = UserRepository(get_test_connection()) 
         self.loginServ = LoginService(self.userRp)
 
     def test_login_fails_with_no_users(self):
@@ -18,7 +19,6 @@ class TestLoginService(unittest.TestCase):
             )
         ret = self.loginServ.check_passwd("admin", "admin")
         self.assertEqual(ret, True)
-
 
 
 

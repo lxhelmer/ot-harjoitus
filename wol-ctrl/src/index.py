@@ -3,10 +3,12 @@ from device_repository import DeviceRepository
 from user_repository import UserRepository
 from services.login_service import LoginService
 from ui.ui import UI
+from db_connection import get_database_connection
 
 def starter():
+    connection = get_database_connection()
     devices = DeviceRepository()
-    users = UserRepository()
+    users = UserRepository(connection)
     login_service = LoginService(users)
 
     window = Tk()
