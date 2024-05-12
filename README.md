@@ -67,4 +67,4 @@ Ohjelmakoodille voi ajaa linttauksen komennolla:
 poetry run invoke lint
 ```
 
-### OHJELMAA VOI TÄLLÄ HETKELLÄ KÄYTTÄÄ TUNNUKSIN "admin", "admin"
+### OHJELMAA VOI KÄYTTÄÄ MYÖS TESTITUNNUKSIN "admin", "admin"
