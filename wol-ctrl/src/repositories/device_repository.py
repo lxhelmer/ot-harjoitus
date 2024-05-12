@@ -2,7 +2,6 @@ from classes.objects import Device
 
 class DeviceRepository:
     """Class for managing device instances.
-
     Attributes:
         connection: Database connection instance
     """
@@ -39,7 +38,6 @@ class DeviceRepository:
             user_id: Unique numeric identifier for user
         Returns:
             List with specified users devices
-
         """
         cursor = self._connection.cursor()
         cursor.execute('''SELECT * FROM device WHERE user_id == ?''', [user_id])

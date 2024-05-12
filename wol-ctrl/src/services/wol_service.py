@@ -1,8 +1,7 @@
 import socket
-import binascii
 
 def wol(dev):
-
+    # pylint: disable=W0718
     try:
         b_mac = bytes.fromhex(dev.mac.replace(':', ''))
         magic = b"\xff" * 6 + b_mac * 16
