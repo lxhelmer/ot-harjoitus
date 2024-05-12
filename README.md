@@ -13,9 +13,13 @@
 
 [Käyttöohje](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/kayttoohje.md)
 
+[Testaus](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/testaus.md)
+
 [Viikon 5 release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/viikko5)
 
 [Viikon 6 release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/viikko6)
+
+[Palautus release](https://github.com/lxhelmer/ot-harjoitus/releases/tag/palautus_release)
 
 
 
