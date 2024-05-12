@@ -9,16 +9,19 @@ class LoginView:
         root: Root to set the view frame in
         handle_login: handler fuction for login
     """
-    def __init__(self, root, handle_login):
+    def __init__(self, root, handle_login, show_create):
         """Initialising function for the class
         Args:
             frame: Master frame for view
             root: Root to set the view frame in
             handle_login: handler fuction for login
+            show_create: handler functior for moving to
+            user createion view
         """
 
         self._root = root
         self._handle_login = handle_login
+        self._handle_show_create = show_create
         self._frame = None
         self.generate()
 
@@ -26,7 +29,7 @@ class LoginView:
     def pack(self):
         """Packs the class frame to be displayed.
         """
-        self._frame.pack(fill=constants.X)
+        self._frame.pack(expand=True,fill=None)
 
     def destroy(self):
         """Destroys the current frame.
@@ -47,12 +50,16 @@ class LoginView:
                 command=lambda : self._handle_login(usr_entry.get(),pswd_entry.get()),
                 text="log in"
                 )
+        create_button = ttk.Button(
+                master=self._frame,
+                command=self._handle_show_create,
+                text="create user"
+                )
 
         usr_label.grid()
         usr_entry.grid(row = 0, column = 1)
         pswd_label.grid()
         pswd_entry.grid(row = 1, column = 1)
-        login_button.grid()
-
-
-
+        create_button.grid(pady=5) 
+        login_button.grid(row=2, column = 1, pady=5) 
+        self.pack()

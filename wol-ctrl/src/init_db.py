@@ -5,10 +5,10 @@ def drop_tables(connection):
     cursor = connection.cursor()
 
     cursor.execute('''
-                   DROP TABLE IF EXISTS users;
+                   DROP TABLE IF EXISTS user;
                    ''')
     cursor.execute('''
-                   DROP TABLE IF EXISTS devices;
+                   DROP TABLE IF EXISTS device;
                    ''')
     connection.commit()
 
@@ -28,9 +28,10 @@ def create_user_table(connection):
         connection: database connection
     """
     connection.cursor().execute('''
-                   CREATE TABLE users (
-                       username text primary key,
-                       hash text
+                   CREATE TABLE user (
+                       id   INTEGER PRIMARY KEY,
+                       username TEXT UNIQUE,
+                       hash TEXT
                     );
                    ''')
     connection.commit()
@@ -43,12 +44,12 @@ def create_device_table(connection):
         connection: database connection
     """
     connection.cursor().execute('''
-                   CREATE TABLE devices (
+                   CREATE TABLE device (
                        id   INTEGER PRIMARY KEY,
                        name TEXT,
-                       user TEXT,
-                       mac TEXT,
-                       ip TEXT
+                       user_id INTEGER REFERENCES user(id),
+                       mac TEXT UNIQUE,
+                       ip TEXT UNIQUE
                        );
                    ''')
     connection.commit()

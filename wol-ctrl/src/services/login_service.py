@@ -6,8 +6,10 @@ class LoginService:
     def __init__(self, user_repo):
         self._users = user_repo
 
-    def check_passwd(self, user, pswd):
+    def check_passwd(self, username_string, pswd):
         users = self._users.find_all()
-        if user in users.keys():
-            return check_password_hash(users[user], pswd)
+        for user in users:
+            if user.username == username_string:
+                if check_password_hash(user.hash, pswd):
+                    return True, user.id
         return False
