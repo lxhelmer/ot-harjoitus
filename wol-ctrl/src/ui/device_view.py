@@ -62,13 +62,17 @@ class DeviceView:
         self._name_entry = ttk.Entry(master = self._frame)
         self._mac_entry = ttk.Entry(master = self._frame)
         self._ip_entry = ttk.Entry(master = self._frame)
-        self._add_label = ttk.Label(master=self._frame, text="Add a new device!")
+        self._add_label = ttk.Label(master=self._frame,text="  Add a new device!  ", borderwidth=2, relief="solid")
         self._logout_button = ttk.Button(
                 master=self._frame,
                 text="Log out",
                 command=self._handle_logout
                 )
+        self._wol_label = ttk.Label(master=self._frame, text="Sent wol message as string:")
         self._text_area = ttk.Entry(master=self._frame)
+        self._info_area = ttk.Entry(master=self._frame, width = 60)
+        self._info_area.insert(0,"[STATUS]")
+        self._wol_label.grid(row = l_l, column=1)
         self._text_area.grid(row = l_l, columnspan=2, column=2)
         l_l += 1
 
@@ -83,6 +87,7 @@ class DeviceView:
 
         self._add_button.grid(row=l_l+3, column=2, pady = 3)
         self._logout_button.grid(row=l_l+3, column=3, padx=5)
+        self._info_area.grid(columnspan = 4)
         self.pack()
 
     def update(self):
@@ -108,8 +113,18 @@ class DeviceView:
         mac = self._mac_entry.get()
         ip = self._ip_entry.get()
         if not(name == "" or mac == "" or ip == ""):
-            self._dRepo.create({"name":name, "user_id":user_id, "mac":mac, "ip":ip})
-            self.update()
+            new = self._dRepo.create({"name":name, "user_id":user_id, "mac":mac, "ip":ip})
+            if new:
+                self._info_area.delete(0,END)
+                self.update()
+                self._info_area.insert(0,"Added device: "+ new["name"]+", with mac:" + new["mac"])
+            else:
+                self._info_area.delete(0,END)
+                self._info_area.insert(
+                        0,
+                        "Adding device failed, check for duplicates!"
+                        )
+
     
     def _handle_wakeup(self, dev):
         magic = wol(dev)

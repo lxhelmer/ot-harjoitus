@@ -16,7 +16,7 @@ def starter():
 
     window = Tk()
     window.title("TkInter example")
-    window.geometry("800x800")
+    window.geometry("800x600")
     ui = UI(window, devices, users, login_service)
     #populate devices for preliminary testing
     devices.create({ "name":"machine1", "user_id":1, "mac":"23:A1", "ip": "123.121"})
@@ -24,7 +24,7 @@ def starter():
     devices.create({ "name":"machine3", "user_id":2, "mac":"23:A3", "ip": "123.123"})
 
     #populate with default user
-    users.create("admin", "admin")
+    users.create("admin","admin")
     ui.start()
     window.mainloop()
 

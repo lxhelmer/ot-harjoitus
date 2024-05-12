@@ -7,9 +7,11 @@ class LoginService:
         self._users = user_repo
 
     def check_passwd(self, username_string, pswd):
+        if username_string == "" or pswd == "":
+            return False, 0
         users = self._users.find_all()
         for user in users:
             if user.username == username_string:
                 if check_password_hash(user.hash, pswd):
                     return True, user.id
-        return False
+        return False, 0

@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.security import check_password_hash
 from ui.device_view import DeviceView
 from ui.login_view import LoginView
 from ui.user_creation_view import UserCreationView

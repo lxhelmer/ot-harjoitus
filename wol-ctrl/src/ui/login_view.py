@@ -44,7 +44,7 @@ class LoginView:
         usr_label = ttk.Label(master=self._frame, text="username")
         pswd_label = ttk.Label(master=self._frame, text="password")
         usr_entry = ttk.Entry(master=self._frame)
-        pswd_entry = ttk.Entry(master=self._frame)
+        pswd_entry = ttk.Entry(master=self._frame, show="*")
         login_button = ttk.Button(
                 master=self._frame,
                 command=lambda : self._handle_login(usr_entry.get(),pswd_entry.get()),

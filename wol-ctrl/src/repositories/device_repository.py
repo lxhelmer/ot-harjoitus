@@ -61,7 +61,7 @@ class DeviceRepository:
         Args:
             dev_id: Numeric id of the wanted device object.
         Returns:
-            Single decive object
+            List with single object or empty list
         """
         devices = self.find_all()
         return list(filter(lambda device: device.id == dev_id, devices))
