@@ -2,45 +2,29 @@
 
 ## Sovelluksen tarkotus
 Sovellus tarjoaa yksinkertaisen käyttöliittymän järjestelmien etä käynnistämiseen wol-kutsuja (wake-on-lan) kutsuja käyttäen. 
-Sovellus tarjoaa mahdollisuuden hallita laitteiden tietoja. Lisätä uusia laitteita, poistaa vanhoja laitteita ja muokata laitekohtaisia tietoja. Säilytettäviä tietoja ovat mm laitteelle annetu nimi ja sen IP.
+Sovellus tarjoaa mahdollisuuden hallita laitteiden tietoja. Lisätä uusia laitteita, poistaa vanhoja laitteita.
+Säilytettäviä tietoja ovat wol kutsun vaatimat tiedot (ip- ja mac-osoite) sekä laitteen uniikki nimi. Laitteet ovat myös sidottu laitteen
+lisänneeseen käyttäjään.
 
 ## Käyttäjät
-Lähtokohtaisesti järjestelmään voi luoda käyttäjiä ja jokaisella käyttäjällä on sen omat tiedot järjestelmässä joita se voi muokata. Järjestelmään luodaan myös admin tason käyttäjä jolla
-on mahdollisuus muokata käyttäjiä ja niiden tietoja.
+Sovelluksessa on yhdentasoisia käyttäjiä. Käyttäjällä on pääsy hänen omiin laitteisiinsa. Laitteet eivät näy ristiin käyttäjien välillä.
+Järjestelmässä on testailua ja demoamista varten valmiiksi populoitu oletuskäyttäjä 'admin' jota voi käyttää salasanalla 'admin'
 
-## Toiminnallisuus
-- Järjestelmän etusivuna toimii kirjautumissivu jolla käyttäjä voi kirjautua sisään tai luoda uuden käyttäjän normaaliin tapaan. 
-- Käyttäjää luodessa voi valita onko käyttäjä normaali- vai admin-käyttäjä
-- Normaali käyttäjä näkee järjestelmään kirjauduttuaan hallitsemiensa laitteiden tilan listana
-- Käyttäjällä on heti tässä listauksessa mahdollisuus käynnistää laitteita.
-- Käyttäjällä on myös mahdollisuus siirtyä laitekohtaiselle sivulle hallitsemaan laitteen tietoja.
-- Admin-käyttäjä kirjauduttuaan näkee admin-käyttäjään hallinnassa olevat käyttäjät.
-- Hän voi tästä näkymästä normaalin käyttäjän laitenäkymän tavoin siirtyä muokkaamaan käyttäjäkohtaisia tietoja
-- Käyttäjän sivulle siirtyessä admin näkee käyttäjän tavoin käyttäjäkohtaiset hallittavat laitteet.
+## Toiminnallisuu
+Järjestelmässä voi luoda uusia käyttäjiä kirjautua käyttäjällä sisään sekä lisätä ja poistaa laitteita. Tämän lisäksi sovelluksella voi
+lähettää WOL kutsun. Ohjelma generoi laitekohtaisen 'magic' paketin ja esittää sen myö käyttäjälle tekstimuodossa.
 
- ### Yhteenvetona
- Kuusi erillistä näkymää:
- - Kirjautumissivu
- - Käyttäjän luonti sivu
- - Normaalin käyttäjän etusivu jossa laitelistaus
- - Laitekohtainen hallintasivu
- - Admin-käyttäjän normaalikäyttäjä listaus näkymä
- - Admin-käyttäjän normaalikäyttäjä kohtainen hallintasivu
-(Admin-käyttäjä käyttää laitteille samoja näkymiä kuin normaalikäyttäjä)
+### Näkymät
+Ohjelma koostuu kolmesta näkymästä. Ensimmäisenä käyttäjä aloittaa kirjatumisnäkymästä. Kirjautumisnäkymässä käyttäjä voi kirjautua sisään
+jo luodun käyttäjän tilille. Näkymästä voi siirtyä myös luomaan uuden käyttäjän. Käyttäjän luomis näkymässä käyttäjä siirretään automaattisesti
+luonnin jälkeen sovelluksen päänäkymään. Päänäkymässä käyttäjän laitteet on listattuna. Kun käyttäjä lisää uuden laitteen lisätään se näkymään.
+Laitteita voi myös poistaa ja niihin voi lähettää wol kutsuja. Jos laitteen lisäys tai wol-kutsun lähetys epäonnistuu esitetään asia käyttäjälle
+status alueiden kautta.
 
-## Jatkokehitys
-- Mahdollisuus rajata normaalikäyttäjiä eri joukkouhin
-- Admin-käyttäjät voisivat vastaavasti hallita eri joukkoja rajatusti
-- Admin käyttäjän mahdollisuus lisätä tietylle joukolle yhteinen laite
-- Admin käyttäjän mahdollisuus lisätä laitteita joita normaalikäyttäjä ei voi muokata
-- Normaalikäyttäjän mahdollisuus lisätä yksityinen adminkäyttäjien tavoittamattomissa oleva käyttäjä
+## WOL-VIESTI
+Tässä liitteen esimerkkikuva sovelluksen lähettämästä WOL-viestistä verkkoliikenteestä kaapattuna.
+![img](https://github.com/lxhelmer/ot-harjoitus/blob/main/wol-ctrl/dokumentaatio/testing.png)
 
-## Tehty
-- Laitteet listataan käyttäjälle
-- Käyttäjä voi poistaa tai lisätä laitteen
-- Ohjelma toimii graafisessa käyttöliittymässä
-- Käyttäjä voi kirjautua sisään (toimii tällä hetkellä vain "admin","admin" tunnuksilla
-- Kirjautumisen jälkeen näkymä vaihtuu laitenäkymään
-- Laitteet ja käyttäjät säilytetään tietokannoissa.
-- Laitteesta lisätään nyt myös mac ja ip joita tarvitaan wol käskyn lähettämiseen
-- ip ja mac otetaan huomioon tietokantaskeemassa sekä uissa
+## Jatkokehitysideita
+Sovelluksissa voisi olla käyttäjä joukkoja joilla olisi käytössä yhteisiä laitteita. Sovelluksessa voisi olla myös eritasoisia käyttäjiä siten että
+joillakin käyttäjillä on laajemmat oikeudet. Tämä mahdollistaisi esimerkiksi käyttäjien hallinnan.
