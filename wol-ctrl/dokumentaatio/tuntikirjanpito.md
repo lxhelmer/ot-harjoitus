@@ -9,4 +9,6 @@
 |23.4.24| 3h   | LoginService, Hahing, testejä, koodinlaatua
 |28.4.24| 4h   | SQL integraatio
 |30.4.24| 4h   | UI uudelleen rakennus, docstring ja testien muokkaaminen sql yhteensopiviks
-|yhteensä| 28h| 
+|5.5.224| 3h   | Ohjelmakoodin rakenteen parantelua
+|12.5.23| 6h   | Typeclass toteutus, wol viestin toteutus, parannuksi uihin
+|yhteensä| 27h| 
